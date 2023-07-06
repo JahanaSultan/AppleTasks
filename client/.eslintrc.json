@@ -8,12 +8,14 @@
         "standard-with-typescript",
         "react-app",
         "react-app/jest",
-        "plugin:import/typescript"
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaFeatures":{
-            "jsx":true
+        "ecmaFeatures": {
+            "jsx": true,
+            "arrowFunctions": true
         },
         "ecmaVersion": "latest",
         "sourceType": "module",
@@ -21,16 +23,37 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
-        "quotes": ["error", "double",{
-            "avoidEscape": true
-        }],
-        "@typescript-eslint/quotes": ["error", "double",{
-            "avoidEscape": true
-        }],
-        "semi": ["error", "always"],
-        "@typescript-eslint/semi": ["error", "always"]
-    }
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "@typescript-eslint/quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "@typescript-eslint/semi": [
+            "error",
+            "always"
+        ],
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": [
+            "warn"
+        ]
+    },
+    "settings": {}
 }
