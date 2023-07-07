@@ -13,6 +13,7 @@
 
 .form-controls {
   width: 300px;
+
   .form-label {
     display: block;
     margin-bottom: 0.1rem;
@@ -36,28 +37,39 @@
       outline: 2px solid $color-primary;
     }
   }
+  .form-error{
+    color: $red;
+    font-size: $font-size-small;
+    text-transform: capitalize;
+  }
 }
+
 .form-controls-error {
   .form-input {
     border-color: $red;
+
     &:focus {
       outline: 2px solid $red;
     }
   }
+
   .form-label {
     color: $red;
   }
+
   .form-error {
     color: $red;
     font-size: $font-size-small;
   }
 }
+
 .form-common-error {
   color: $red;
   text-align: center;
   margin-top: 0.5rem;
   text-transform: capitalize;
 }
+
 .form-submit {
   display: block;
   width: 100%;

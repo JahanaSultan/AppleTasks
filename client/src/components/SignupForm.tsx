@@ -1,11 +1,15 @@
 import "../assets/partials/_form.scss";
-import { Link } from "react-router-dom";
-import { fetchRegister } from "../api/api";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { fetchRegister, fetchToken } from "../api/api";
 import { useFormik } from "formik";
 import validationSchema from "../schemas/validation";
+import { useSignIn } from "react-auth-kit";
+import { useState } from "react";
 
 const SignupForm = (): JSX.Element => {
+  const signIn = useSignIn();
+  const navigate = useNavigate();
+  const [error, setError] = useState<string>("");
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: {
@@ -18,9 +22,24 @@ const SignupForm = (): JSX.Element => {
       onSubmit: async (values) => {
         try {
           const response = await fetchRegister(values);
-          alert("User registered successfully");
-        } catch (error) {
-          alert("Something went wrong");
+          if (response.status === 201) {
+            const token = await fetchToken({
+              email: response.data.email,
+              password: values.password,
+            });
+            signIn({
+              token,
+              expiresIn: 3600,
+              tokenType: "Bearer",
+              authState: { email: response.data.email },
+            });
+            navigate("/");
+          }
+        } catch (error: any) {
+          const err = Object.values(error.response.data).map(
+            (value: unknown) => String(value) + "\n",
+          );
+          setError(String(err));
         }
       },
     });
@@ -39,6 +58,7 @@ const SignupForm = (): JSX.Element => {
             : "form-controls"
         }
       >
+        {error !== "" ? <p className="form-error">{error}</p> : ""}
         <label htmlFor="name" className="form-label">
           Name
         </label>

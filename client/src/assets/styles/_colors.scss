@@ -9,7 +9,7 @@ $purple: #8e44ad;
 $gray: #95a5a6;
 $dark: #000;
 $bright: #fff;
-$bright-alpha: rgba(255, 255, 255, 0.5);
+$bright-alpha: rgb(255 255 255 / 50%);
 
 // Color Scheme
 $color-primary: #4abdac;
@@ -20,7 +20,7 @@ $color-highlight: $color-secondary;
 // Common colors
 $color-text: #dfdfdf;
 $color-bg: #f1f1f1;
-$color-border: rgba(249, 250, 251, 0.103);
+$color-border: rgb(249 250 251 / 10.3%);
 
 
 // Links

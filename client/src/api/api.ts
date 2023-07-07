@@ -5,7 +5,7 @@ export const fetchRegister = async (data: any): Promise<any> => {
     "http://127.0.0.1:8000/api/user/create/",
     data,
   );
-  return response.data;
+  return response;
 };
 
 export const fetchToken = async (data: any): Promise<any> => {
@@ -13,8 +13,7 @@ export const fetchToken = async (data: any): Promise<any> => {
     "http://127.0.0.1:8000/api/user/token/",
     data,
   );
-  localStorage.setItem("token", response.data.token);
-  return response.data;
+  return response.data.token;
 };
 
 export const fetchMe = async (): Promise<any> => {
