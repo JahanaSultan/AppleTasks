@@ -1,0 +1,148 @@
+@import "variables";
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.is-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.is-shown {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.is-invisible {
+  visibility: hidden;
+}
+
+.l-floatLeft {
+  float: left;
+}
+
+.l-floatRight {
+  float: right;
+}
+
+.l-clear {
+  clear: both;
+  float: none;
+}
+
+.l-mb0 {
+  margin-bottom: 0;
+}
+
+.l-mt0 {
+  margin-top: 0 !important;
+}
+
+// Add the default transition to any element
+.transition {
+  transition: $default-transition;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.full-h {
+  height: 100vh;
+}
+
+.half-h {
+  height: 50vh;
+}
+
+.w5 {
+  width: 19%;
+}
+
+.w4 {
+  width: 24%;
+}
+
+.w3 {
+  width: 32%;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.half-w {
+  width: 50%;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.squared {
+  aspect-ratio: 1 / 1;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: $spacing-small;
+}
+
+.p-2 {
+  padding: $spacing-medium;
+}
+
+.p-3 {
+  padding: $spacing-large;
+}
+
+.p-x-lg {
+  padding-left: $spacing-large;
+  padding-right: $spacing-large;
+}
+
+.p-x-md {
+  padding-left: $spacing-medium;
+  padding-right: $spacing-medium;
+}
+
+.p-x-sm {
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+}
+
+.blur{
+  backdrop-filter: blur(10px);
+}
+
+.mt-1{
+  margin-top: 1rem;
+}

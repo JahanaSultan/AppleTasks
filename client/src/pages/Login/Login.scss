@@ -1,0 +1,11 @@
+@import "../../assets/styles/helper_classes";
+@import "../../assets/styles/colors";
+@import "../../assets/styles/reset";
+@import "../../assets/styles/variables";
+.form {
+  .form-box {
+    background: $bright-alpha;
+    border-radius: $border-radius-m;
+    box-shadow: $shadow-large;
+  }
+}

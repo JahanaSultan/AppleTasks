@@ -9,18 +9,18 @@ $purple: #8e44ad;
 $gray: #95a5a6;
 $dark: #000;
 $bright: #fff;
-$color-kickoff-blue: #181830;
-$color-kickoff-orange: #fe7c08;
+$bright-alpha: rgba(255, 255, 255, 0.5);
 
 // Color Scheme
-$color-primary: #181830;
-$color-secondary: $orange;
-$color-highlight: $blue;
+$color-primary: #4abdac;
+$color-secondary: #fc4a1a;
+$color-sunshine: #f7b733;
+$color-highlight: $color-secondary;
 
 // Common colors
-$color-text: #444;
+$color-text: #dfdfdf;
 $color-bg: #f1f1f1;
-$color-border: #ddd;
+$color-border: rgba(249, 250, 251, 0.103);
 
 
 // Links

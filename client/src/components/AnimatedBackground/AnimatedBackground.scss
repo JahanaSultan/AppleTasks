@@ -1,0 +1,118 @@
+@import "../../assets/styles/colors";
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: $color-primary;
+  overflow: hidden;
+
+  li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: $bright-alpha;
+    animation: animate 19s linear infinite;
+  }
+  li {
+    &:nth-child(0) {
+      left: 35%;
+      width: 183px;
+      height: 183px;
+      bottom: -183px;
+      animation-delay: 1s;
+    }
+
+    &:nth-child(1) {
+      left: 71%;
+      width: 163px;
+      height: 163px;
+      bottom: -163px;
+      animation-delay: 3s;
+    }
+
+    &:nth-child(2) {
+      left: 55%;
+      width: 194px;
+      height: 194px;
+      bottom: -194px;
+      animation-delay: 10s;
+    }
+
+    &:nth-child(3) {
+      left: 80%;
+      width: 108px;
+      height: 108px;
+      bottom: -108px;
+      animation-delay: 6s;
+    }
+
+    &:nth-child(4) {
+      left: 4%;
+      width: 101px;
+      height: 101px;
+      bottom: -101px;
+      animation-delay: 10s;
+    }
+
+    &:nth-child(5) {
+      left: 32%;
+      width: 134px;
+      height: 134px;
+      bottom: -134px;
+      animation-delay: 10s;
+    }
+
+    &:nth-child(6) {
+      left: 48%;
+      width: 198px;
+      height: 198px;
+      bottom: -198px;
+      animation-delay: 13s;
+    }
+
+    &:nth-child(7) {
+      left: 4%;
+      width: 115px;
+      height: 115px;
+      bottom: -115px;
+      animation-delay: 16s;
+    }
+
+    &:nth-child(8) {
+      left: 49%;
+      width: 134px;
+      height: 134px;
+      bottom: -134px;
+      animation-delay: 2s;
+    }
+
+    &:nth-child(9) {
+      left: 69%;
+      width: 123px;
+      height: 123px;
+      bottom: -123px;
+      animation-delay: 36s;
+    }
+  }
+}
