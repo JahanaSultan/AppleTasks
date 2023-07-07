@@ -4,16 +4,16 @@
 
 // Form
 
-.form-heading{
+.form-heading {
   font-size: $font-size-large;
   font-weight: $font-weight-bold;
   margin-bottom: $spacing-medium;
   color: $color-secondary;
 }
 
-.form-controls{
-
-  .form-label{
+.form-controls {
+  width: 300px;
+  .form-label {
     display: block;
     margin-bottom: 0.1rem;
     margin-top: 1rem;
@@ -21,7 +21,7 @@
     color: $color-primary;
   }
 
-  .form-input{
+  .form-input {
     display: block;
     width: 100%;
     padding: 0.5rem;
@@ -32,19 +32,42 @@
     transition: border-color $default-transition;
     font-family: $font-family-base;
 
-    &:focus{
+    &:focus {
       outline: 2px solid $color-primary;
     }
   }
-
-  .form-error{
+}
+.form-controls-error {
+  .form-input {
+    border-color: $red;
+    &:focus {
+      outline: 2px solid $red;
+    }
+  }
+  .form-label {
+    color: $red;
+  }
+  .form-error {
     color: $red;
     font-size: $font-size-small;
-    display: none;
   }
-
-  .form-input-error{
-    border-color: $red;
-  }
-
+}
+.form-common-error {
+  color: $red;
+  text-align: center;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+.form-submit {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $color-primary;
+  border-radius: $border-radius-s;
+  color: $color-text;
+  background: $color-primary;
+  transition: border-color $default-transition;
+  font-family: $font-family-base;
+  cursor: pointer;
+  margin-top: $spacing-medium;
 }

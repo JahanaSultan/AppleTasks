@@ -1,8 +1,9 @@
 import "../assets/partials/_form.scss";
+import { Link } from "react-router-dom";
 
 const LoginForm = (): JSX.Element => {
   return (
-    <>
+    <form className="p-3 form-box blur">
       <h2 className="form-heading text-center">Login Form</h2>
       <div className="form-controls">
         <label htmlFor="username" className="form-label">
@@ -28,10 +29,13 @@ const LoginForm = (): JSX.Element => {
         />
         <span className="form-error">Please enter a password</span>
       </div>
+      <button className="form-submit" type="submit">
+        Login
+      </button>
       <p className="helper mt-1">
-        Don't have an account? <a href="/signup">Sign up</a>
+        Don't have an account? <Link to="?mode=signup">Signin</Link>
       </p>
-    </>
+    </form>
   );
 };
 
