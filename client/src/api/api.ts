@@ -1,11 +1,7 @@
 import axios from "axios";
 
 export const fetchRegister = async (data: any): Promise<any> => {
-  const response = await axios.post(
-    "http://127.0.0.1:8000/api/user/create/",
-    data,
-  );
-  return response;
+  return await axios.post("http://127.0.0.1:8000/api/user/create/", data);
 };
 
 export const fetchToken = async (data: any): Promise<any> => {
@@ -16,8 +12,7 @@ export const fetchToken = async (data: any): Promise<any> => {
   return response.data.token;
 };
 
-export const fetchMe = async (): Promise<any> => {
-  const token = localStorage.getItem("token") ?? "";
+export const fetchMe = async (token: string): Promise<any> => {
   const response = await axios.get("http://127.0.0.1:8000/api/user/me/", {
     headers: {
       Authorization: `Token ${token}`,

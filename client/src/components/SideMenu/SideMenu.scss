@@ -1,0 +1,15 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/helper_classes";
+@import "../../assets/styles/reset";
+@import "../../assets/styles/typography";
+@import "../../assets/styles/variables";
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  background: $color-primary;
+  height: 100vh;
+  padding: $spacing-small
+}

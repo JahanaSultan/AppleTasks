@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router";
 import Authentication from "./pages/Authentication/Authentication";
 import Dashboard from "./pages/Dashboard/Dashboard";
