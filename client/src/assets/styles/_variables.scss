@@ -1,6 +1,3 @@
-@import "./colors";
-@import "./typography";
-
 // Spacings
 $spacing-small: 10px;
 $spacing-medium: 20px;
@@ -10,8 +7,10 @@ $spacing-large: 50px;
 $default-transition: 0.5s;
 
 // Breakpoints
-$medium: 991px;
-$small: 575px;
+$mobile: 576;
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
 
 // border
 

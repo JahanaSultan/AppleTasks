@@ -1,24 +1,62 @@
 @mixin flex-center {
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
-transition: $property $duration $timing;
+  transition: $property $duration $timing;
 }
 
+@mixin background-image($image) {
+  background-image: url($image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin background-image-fixed($image) {
+  @include background-image($image);
+  background-attachment: fixed;
+}
+
+@mixin background-image-overlay($image, $color) {
+  @include background-image($image);
+  background-color: $color;
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
 
 @mixin tablet {
- @media (max-width: #{$medium}) {
-     @content;
- }
- 
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
 }
 
-@mixin mobile {
- @media (max-width: #{$small}) {
-     @content;
- }
- 
+@mixin large {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+/* ===== Usage ===== */
+h1 {
+  font-size: 10px;
+
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
 }

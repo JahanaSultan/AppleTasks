@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router";
 import Authentication from "./pages/Authentication/Authentication";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { RequireAuth } from "react-auth-kit";
+import "./assets/styles/base.scss";
 
 function App(): JSX.Element {
   return (

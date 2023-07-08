@@ -1,6 +1,7 @@
 import * as yup from "yup";
 
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_-])(?=.{6,})/;
+const passwordRegex =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_-])(?=.{6,})/;
 
 const validationSchema = yup.object({
   name: yup.string().required("Name is required"),
