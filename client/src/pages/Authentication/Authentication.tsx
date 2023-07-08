@@ -2,7 +2,7 @@ import "./Authentication.scss";
 import LoginForm from "../../components/LoginForm";
 import SignupForm from "../../components/SignupForm";
 import AnimatedBackground from "../../components/AnimatedBackground/AnimatedBackground";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 const Authentication = (): JSX.Element => {
   const [searchParams] = useSearchParams();

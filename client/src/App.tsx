@@ -1,10 +1,11 @@
-import { Routes, Route } from "react-router";
-import Authentication from "./pages/Authentication/Authentication";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { RequireAuth, useAuthUser } from "react-auth-kit";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import { RequireAuth } from "react-auth-kit";
+import Authentication from "./pages/Authentication/Authentication";
 import "./assets/styles/base.scss";
 
 function App(): JSX.Element {
+  const auth = useAuthUser();
   return (
     <Routes>
       <Route
@@ -15,7 +16,10 @@ function App(): JSX.Element {
           </RequireAuth>
         }
       />
-      <Route path="/auth" element={<Authentication />} />
+      <Route
+        path="/auth"
+        element={auth !== null ? <Navigate to="/" /> : <Authentication />}
+      />
     </Routes>
   );
 }

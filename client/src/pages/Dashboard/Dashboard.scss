@@ -1,0 +1,17 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.dashboard{
+ display: grid;
+ grid-gap: 2rem;
+ grid-template-areas: "sidebar topnav" "sidebar main";
+ grid-template-columns: 80px 1fr;
+ min-height: 100vh;
+ background-color: $color-bg;
+
+ @include mobile{
+  grid-gap: 1rem;
+  grid-template-columns: 50px 1fr;
+ }
+}
